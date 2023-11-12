@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   direction: rtl;
+  @apply font-yekan;
+}
+
+/* *{
+  border: 1px red solid;
+} */
+
+
+@layer basr {
+  @font-face {
+    font-family: "yekan";
+    src: url(assets/Yekan-Font-3.0/Yekan.ttf);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+.is-overflow{
+  padding: 0;
+}
+
+.text-input {
+  direction: rtl;         /* راست چین کردن متن */
+  text-align: right;      /* محتوا را در سمت راست قرار دادن */
+}
+
+.text-input::placeholder {
+  text-align: right;      /* قرار دادن placeholder در سمت راست */
+}
+
+.text-input:focus {
+  direction: ltr;         /* چپ چین کردن متن در حالت focus */
+  text-align: left;       /* محتوا را در سمت چپ قرار دادن در حالت focus */
+}
